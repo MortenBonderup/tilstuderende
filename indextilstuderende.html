@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kursustilmeldingssystem</title>
+  <style>
+    .section { margin-bottom: 20px; border: 1px solid #ccc; padding: 10px; border-radius: 5px; }
+    h3 { margin-top: 0; }
+    ul { list-style-type: none; padding: 0; }
+    li { padding: 5px; }
+    select, button { margin-right: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Kursustilmeldingssystem</h1>
+
+  <div class="section">
+    <h3>Tilmeld en studerende til et kursus</h3>
+    <select id="studerende"><option value="">Vælg studerende</option></select>
+    <select id="kursus"><option value="">Vælg kursus</option></select>
+    <button onclick="tilmeld()">Tilmeld</button>
+  </div>
+
+  <div class="section">
+    <h3>Studerende og deres kurser</h3>
+    <ul id="studerendeKurser"></ul>
+  </div>
+
+  <div class="section">
+    <h3>Studerende uden tilmeldinger</h3>
+    <ul id="studerendeUdenTilmeldinger"></ul>
+  </div>
+
+  <div class="section">
+    <h3>Kurser uden studerende</h3>
+    <ul id="kurserUdenStuderende"></ul>
+  </div>
+
+  <div class="section">
+    <h3>Vælg to kurser til fællesmængde og foreningsmængde</h3>
+    <select id="kursus1"><option value="">Vælg kursus 1</option></select>
+    <select id="kursus2"><option value="">Vælg kursus 2</option></select>
+    <button onclick="opdaterFaellesOgForeningsMaengde()">Vis</button>
+  </div>
+
+  <div class="section">
+    <h3>Fællesmængde (intersection)</h3>
+    <ul id="faellesMaengde"></ul>
+  </div>
+
+  <div class="section">
+    <h3>Foreningsmængde (union)</h3>
+    <ul id="foreningsMaengde"></ul>
+  </div>
+
+  <script>
+    // Tomt script - I vil udfylde dette sammen i undervisningen
+  </script>
+</body>
+</html>
