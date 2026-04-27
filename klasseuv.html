@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="resultatdiv"></div>
+
+    <script>
+        function visResultat(tekst, set) {
+            resultatdiv.insertAdjacentHTML("beforeend", tekst);
+            for (const element of set) {
+                resultatdiv.insertAdjacentHTML("beforeend", element + " ");
+            }
+            resultatdiv.insertAdjacentHTML("beforeend", "<br><br>");
+        }
+
+        const A = new Set([1,2,3,4]);
+        const B = new Set([3,4,5]);
+        const C = new Set([[1,2], [2,3], [3,4]]);
+
+        B.add(10);
+        B.add(5);
+
+        visResultat("Mængden A: ", A);
+        visResultat("Mængden B: ", B);
+        visResultat("Mængden C (ordnede par): ", C);
+
+        visResultat("Fællesmængden: ", A.intersection(B));
+        visResultat("Foreningsmængde: ", A.union(B));
+        visResultat("Differensmængde A\\B: ", A.difference(B));
+        visResultat("Differensmængde B\\A: ", B.difference(A));
+
+    resultatdiv.insertAdjacentHTML("beforeend", "Ingen overlap (disjunkte): " + A.isDisjointFrom(B) + "<br>");
+
+    resultatdiv.insertAdjacentHTML("beforeend", "B er en delmængde af A: " + B.isSubsetOf(A) + "<br>");
+
+    resultatdiv.insertAdjacentHTML("beforeend", "Indeholder mængden A elementet 4: " + A.has(4) + "<br>");
+
+    resultatdiv.insertAdjacentHTML("beforeend", "B indeholder : " + B.size + " elementer.");
+    </script>
+</body>
+</html>
